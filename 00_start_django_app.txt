@@ -1,0 +1,27 @@
+# Make a vitural environment
+python -m venv venv
+
+# activate virutal environment
+venv\scripts\activate
+
+# Install Django
+pip install django
+
+# Start Project
+django-admin startproject core
+
+# Rename top folder from core to DjangoApp
+
+# Start an app
+cd DjangoApp
+python manage.py startproject audioapp
+
+# Add to apps in core/settings.py
+INSTALLED_APPS = [
+      ...,
+    'audioapp’,
+]
+
+# Make Migrations and Migrate
+python manage.py makemigrations
+python manage.py migrate
